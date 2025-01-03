@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXSCRIPT</title>
+    <link rel="stylesheet" href="styles/options.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/options.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #00CED1; /* Turquoise */
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #00CED1; /* Turquoise */
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 4px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #00CED1; /* Turquoise */
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #008B8B; /* Darker Turquoise */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-card {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .contact-card .icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>EXSCRIPT AutoCheckouter</h1>
+        <label class="switch">
+            <input type="checkbox" id="extensionToggle">
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <div id="main-content">
+        <div class="input-group">
+            <label for="bin1">Primary BIN:</label>
+            <input type="text" id="bin1" maxlength="14" placeholder="Enter primary BIN">
+        </div>
+
+        <div class="input-group">
+            <label for="bin2">Secondary BIN (Optional):</label>
+            <input type="text" id="bin2" maxlength="14" placeholder="Enter secondary BIN">
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="generateKey">Generate Key:</label>
+                <input type="text" id="generateKey" maxlength="1" placeholder="X">
+            </div>
+            <div class="input-group">
+                <label for="clearKey">Clear Key:</label>
+                <input type="text" id="clearKey" maxlength="1" placeholder="C">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="cardDetails">Card Details (Optional):</label>
+            <textarea id="cardDetails" placeholder="Enter card details (one per line)&#10;Format: 4069485639589467|11|2032|669"></textarea>
+        </div>
+
+        <div id="statusMessage"></div>
+        <div class="button-group">
+            <button id="saveButton">Save Settings</button>
+            <button id="resetButton">Reset to Defaults</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-section">
+            <h2>Connect With Us</h2>
+            <div class="contact-cards">
+                <a href="https://t.me/+btF-oXsZmJZjNDM8" class="contact-card" target="_blank">
+                    <i class="fab fa-telegram-plane icon"></i>
+                    <div class="contact-info">
+                        <span>My channel</span>
+                        <small>@exscript</small>
+                    </div>
+                </a>
+                <a href="https://t.me/brokenistxd" class="contact-card" target="_blank">
+                    <i class="fa-solid fa-layer-group icon"></i>
+                    <div class="contact-info">
+                        <span>My Telegram</span>
+                        <small>@brokenistxd</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
