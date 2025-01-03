@@ -27,14 +27,17 @@ The **EXSCRIPT-AUTOHITTER** is a powerful tool designed to automatically fill pa
 
 ## Requirements  
 Before you get started, ensure you have:  
-- **Node.js** installed (v14.x or higher)  
-- **Stripe API key** (for accessing Stripe services)  
-- Basic understanding of JavaScript and Stripe API integrations  
+-  **PC OR PHONE**  
+- 
+- **Basic understanding of JavaScript and Stripe API integrations**
 
 ---
 
 ## Installation  
-1. Clone this repository:  
-   ```bash  
-   git clone https://github.com/yourusername/EXSCRIPT-AUTOHITTER.git  
-   cd EXSCRIPT-AUTOHITTER  
+1. Download the ZIP FILE FROM RELEASES
+    **ENABLE EXTENSION DEVELOPER**
+   **LOAD UNPACKED**
+   **ENJOY HITTING**
+
+
+-CREDITS TO DESTROYER X FOR BASE <3
