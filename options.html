@@ -4,122 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXSCRIPT</title>
-    <link rel="stylesheet" href="styles/options.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="js/options.js" defer></script>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, purple, yellow);
             color: white;
+            padding: clamp(15px, 3vw, 30px);
         }
+
         .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
-        header {
+            width: 100%;
+            max-width: 500px;
+            padding: clamp(25px, 5vw, 40px);
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
             text-align: center;
-            margin-bottom: 20px;
         }
-        header h1 {
-            color: #00CED1; /* Turquoise */
+
+        header {
+            margin-bottom: clamp(20px, 4vw, 30px);
         }
-        .input-group {
+
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
             margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
+
+        .input-group {
+            margin-bottom: clamp(20px, 4vw, 25px);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: clamp(14px, 2.5vw, 16px);
+            text-align: left;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         input, textarea {
             width: 100%;
-            padding: 10px;
-            border: 2px solid #00CED1; /* Turquoise */
-            background-color: rgba(0, 0, 0, 0.8);
+            padding: clamp(12px, 2.5vw, 15px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 25px;
             color: white;
-            border-radius: 4px;
+            font-size: clamp(14px, 2.5vw, 16px);
+            transition: all 0.3s ease;
         }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: purple;
+            box-shadow: 0 0 15px purple;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+            border-radius: 15px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: clamp(20px, 4vw, 25px);
+        }
+
+        .input-row .input-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
         .button-group {
             display: flex;
-            justify-content: space-between;
+            gap: clamp(15px, 3vw, 20px);
+            margin-top: clamp(25px, 5vw, 35px);
         }
+
         button {
-            padding: 10px 20px;
+            flex: 1;
+            padding: clamp(12px, 2.5vw, 15px);
+            background-color: purple;
+            color: yellow;
             border: none;
-            background-color: #00CED1; /* Turquoise */
-            color: white;
-            border-radius: 4px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: clamp(14px, 2.5vw, 16px);
             cursor: pointer;
+            transition: all 0.3s ease;
         }
+
         button:hover {
-            background-color: #008B8B; /* Darker Turquoise */
+            background-color: darkviolet;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(128, 0, 128, 0.5);
         }
-        footer {
-            text-align: center;
-            margin-top: 20px;
+
+        .contact-section {
+            margin-top: clamp(30px, 6vw, 40px);
+            padding-top: clamp(20px, 4vw, 30px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        .contact-section h2 {
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
         .contact-card {
             display: flex;
             align-items: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
             color: white;
             text-decoration: none;
-            margin-bottom: 10px;
+            transition: all 0.3s ease;
         }
+
+        .contact-card:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(128, 0, 128, 0.3);
+        }
+
         .contact-card .icon {
-            font-size: 20px;
-            margin-right: 10px;
+            font-size: clamp(20px, 4vw, 24px);
+            margin-right: 15px;
+            color: yellow;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-info span {
+            display: block;
+            font-size: clamp(14px, 2.5vw, 16px);
+            margin-bottom: 4px;
+        }
+
+        .contact-info small {
+            opacity: 0.8;
+            color: yellow;
+        }
+
+        @media (max-width: 480px) {
+            .input-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>
+                <i class="fas fa-crosshairs" style="color: yellow;"></i>
+                EXSCRIPT AutoCheckouter
+                <i class="fas fa-crown" style="color: yellow;"></i>
+            </h1>
+        </header>
 
-<div class="container">
-    <header>
-        <h1>EXSCRIPT AutoCheckouter</h1>
-        <label class="switch">
-            <input type="checkbox" id="extensionToggle">
-            <span class="slider round"></span>
-        </label>
-    </header>
-
-    <div id="main-content">
-        <div class="input-group">
-            <label for="bin1">Primary BIN:</label>
-            <input type="text" id="bin1" maxlength="14" placeholder="Enter primary BIN">
-        </div>
-
-        <div class="input-group">
-            <label for="bin2">Secondary BIN (Optional):</label>
-            <input type="text" id="bin2" maxlength="14" placeholder="Enter secondary BIN">
-        </div>
-
-        <div class="input-row">
+        <div id="main-content">
             <div class="input-group">
-                <label for="generateKey">Generate Key:</label>
-                <input type="text" id="generateKey" maxlength="1" placeholder="X">
+                <label for="bin1">Primary BIN:</label>
+                <input type="text" id="bin1" maxlength="14" placeholder="Enter primary BIN">
             </div>
+
             <div class="input-group">
-                <label for="clearKey">Clear Key:</label>
-                <input type="text" id="clearKey" maxlength="1" placeholder="C">
+                <label for="bin2">Secondary BIN (Optional):</label>
+                <input type="text" id="bin2" maxlength="14" placeholder="Enter secondary BIN">
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="generateKey">Generate Key:</label>
+                    <input type="text" id="generateKey" maxlength="1" placeholder="X">
+                </div>
+                <div class="input-group">
+                    <label for="clearKey">Clear Key:</label>
+                    <input type="text" id="clearKey" maxlength="1" placeholder="C">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cardDetails">Card Details (Optional):</label>
+                <textarea id="cardDetails" placeholder="Enter card details (one per line)&#10;Format: 4069485639589467|11|2032|669"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button id="saveButton">
+                    <i class="fas fa-save"></i> Save Settings
+                </button>
+                <button id="resetButton">
+                    <i class="fas fa-undo"></i> Reset to Defaults
+                </button>
             </div>
         </div>
 
-        <div class="input-group">
-            <label for="cardDetails">Card Details (Optional):</label>
-            <textarea id="cardDetails" placeholder="Enter card details (one per line)&#10;Format: 4069485639589467|11|2032|669"></textarea>
-        </div>
-
-        <div id="statusMessage"></div>
-        <div class="button-group">
-            <button id="saveButton">Save Settings</button>
-            <button id="resetButton">Reset to Defaults</button>
-        </div>
-    </div>
-
-    <footer>
         <div class="contact-section">
-            <h2>Connect With Us</h2>
+            <h2>Connect With Us(SPECIAL THANKS TO DESTROYERX, AND @BROOMKRO, AND 3DS TEAM 🔒/PPG)</h2>
             <div class="contact-cards">
                 <a href="https://t.me/+btF-oXsZmJZjNDM8" class="contact-card" target="_blank">
                     <i class="fab fa-telegram-plane icon"></i>
@@ -137,8 +258,8 @@
                 </a>
             </div>
         </div>
-    </footer>
-</div>
+    </div>
 
+    <script src="js/options.js"></script>
 </body>
 </html>
