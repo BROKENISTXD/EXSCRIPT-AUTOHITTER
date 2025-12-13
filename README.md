@@ -39,5 +39,6 @@ Before you get started, ensure you have:
    **LOAD UNPACKED**
    **ENJOY HITTING**
 
+## IMPORTANT INFO !!!
 
--CREDITS TO DESTROYER X FOR BASE <3
+** As of december 2025 this project has been deprecated and is no longer suppported or maintained by anyone, hope you enjoyed this project thanks for all downloads and all support for any support or source code of the project dm @brokenists and thanks again. Brokenist **
