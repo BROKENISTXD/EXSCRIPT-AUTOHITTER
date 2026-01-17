@@ -42,3 +42,4 @@ Before you get started, ensure you have:
 ## IMPORTANT INFO !!!
 
 ** As of december 2025 this project has been deprecated and is no longer suppported or maintained by anyone, hope you enjoyed this project thanks for all downloads and all support for any support or source code of the project dm @brokenists and thanks again. Brokenist **
+## i have noticed a lot of support lately, if we can somehow reach 50 stars, i promise i will revive the project again.
