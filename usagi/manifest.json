@@ -1,0 +1,85 @@
+{
+  "manifest_version": 3,
+  "name": "UsagiAutoX",
+  "version": "1.0.6",
+  "description": "UsagiAutoX - Stripe Checkout/Invoice Auto Hitter",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "offscreen",
+    "downloads",
+    "clipboardWrite",
+    "tabs",
+    "webNavigation",
+    "alarms",
+    "proxy",
+    "webRequest",
+    "webRequestAuthProvider"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "script/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script/content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*.hcaptcha.com/*",
+        "*://hcaptcha.com/*",
+        "*://newassets.hcaptcha.com/*"
+      ],
+      "js": ["script/hcaptcha.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "script/inject.js",
+        "script/storage.js",
+        "script/autofill.js",
+        "script/proxyhandler.js",
+        "script/binlibrary.js",
+        "styles.css",
+        "sounds/hit.wav",
+        "sounds/music.mp3"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "UsagiAutoX - Click to manage proxy"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

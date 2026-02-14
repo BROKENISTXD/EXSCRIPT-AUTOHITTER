@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Popup specific local overrides if needed, but styles.css should handle most */
+    body {
+        width: 220px; /* Slightly wider for luxury spacing */
+        padding: 16px;
+    }
+  </style>
+</head>
+<body class="popup-body">
+  <div class="header">
+    <h1>EMERGENCY CONTROL</h1>
+  </div>
+
+  <div class="status-box">
+    <div class="status-row">
+      <span class="status-label">STATUS</span>
+      <span class="status-value" id="statusValue">CHECKING...</span>
+    </div>
+    <div class="proxy-info" id="proxyInfo"></div>
+  </div>
+
+  <button class="btn danger-btn" id="clearBtn">CLEAR PROXY</button>
+
+  <div class="footer">USAGI AUTOMATION SUITE</div>
+
+  <script src="script/popup.js"></script>
+</body>
+</html>
