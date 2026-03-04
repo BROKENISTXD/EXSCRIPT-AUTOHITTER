@@ -1,45 +1,13 @@
-# EXSCRIPT-AUTOHITTER ⚡️💳
+# -- NOTE  - THIS PROJECT HAS BEEN DEPRECATED AND IS NO LONGER IN USE.
 
-## Table of Contents  
-- [Description](#description)  
-- [Features](#features)  
-- [Requirements](#requirements)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)  
+# - FOR ANY INQUIRES OR ANYTHING PLEASE CONTACT ME ON MY TELEGRAM ACCOUNT @brokenists
 
----
+# -- UPDATED 04.03.2026, IF THIS PROJECT REACHES 50 STARS I WILL REVIVE IT ELSE THIS PROJECT WON'T BE REVIVED, BECAUSE OF LACK OF FUNDS AND SUPPORT
 
-## Description  
-The **EXSCRIPT-AUTOHITTER** is a powerful tool designed to automatically fill payment details on Stripe checkout forms. Ideal for use cases like automated testing, API integrations, and workflows requiring seamless, reliable payment processing.  
+# -- U CAN STILL RUN THE PROJECT ON PC IF U DO action.submit(otp=sucess) 
 
----
+# - FOR DONATIONS PLEASE CONTACT ME ON TEELGRAM. THIS PROJECT WAS ONLY FOR ENTERTAINMENT AND PORTFOLIO, I DO NOT CONSENT OR RESPOND TO ANY ALLEDGED ACCUSATIONS OF 
+# ANY FORM OF CRIME OR ANYTHING THIS PROJECT WAS MEANT TO AUTOMATE PAYING ON STRIPE WITH UR CARD, NOT TO BE GENERATED AND USED IN ANY OTHER PURPOUSE..
 
-## Features  
-- ✅ Auto-fills Stripe payment fields (card number, expiration date, CVV, etc.)  
-- ✅ Supports multiple Stripe accounts  
-- ✅ Customizable configurations for different use cases  
-- ✅ Secure and efficient payment automation  
-- ✅ Ideal for developers, testers, and automated workflows  
 
----
-
-## Requirements  
-Before you get started, ensure you have:  
--  **PC OR PHONE**  
-- 
-- **Basic understanding of JavaScript and Stripe API integrations**
-
----
-
-## Installation  
-1. Download the ZIP FILE FROM RELEASES
-    **ENABLE EXTENSION DEVELOPER**
-   **LOAD UNPACKED**
-   **ENJOY HITTING**
-
-## IMPORTANT INFO !!!
-
-** As of december 2025 this project has been deprecated and is no longer suppported or maintained by anyone, hope you enjoyed this project thanks for all downloads and all support for any support or source code of the project dm @brokenists and thanks again. Brokenist **
-## i have noticed a lot of support lately, if we can somehow reach 50 stars, i promise i will revive the project again.
+# -- THANKS BROKENIST.
