@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Handler</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+    #imageCanvas {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    #tempInput {
+      position: fixed;
+      top: -9999px;
+      left: -9999px;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="imageCanvas"></canvas>
+  <div id="tempInput" contenteditable="true"></div>
+  <audio id="hitSound" src="sounds/hit.wav" preload="auto"></audio>
+  <script src="script/offscreen.js"></script>
+</body>
+</html>
